@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ProgressIndicator.css">
+    <style>
+        .container,.content
+        {
+            margin-right: 5px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-3">
+                    <div id="progress_steps">
+                        <ul class="SteppedProgress Vertical">
+                            <li class="boxed current" id="step1_progress">
+                                <span>Step 1</span>
+                            </li>
+                            <li class="boxed" id="step2_progress">
+                                <span>Step 2</span>
+                            </li>
+                            <li class="boxed" id="step3_progress">
+                                <span>Step 3</span>
+                            </li>
+                            <li class="boxed" id="step4_progress">
+                                <span>Step 4</span>
+                            </li>
+                            <li class="boxed" id="step5_progress">
+                                <span>Step 5</span>
+                            </li>
+                            <li class="boxed" id="step6_progress">
+                                <span>Final Step</span>
+                            </li>                            
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <form method="post" action="#">
+                        <div class="row">
+                             <!--Step 1-->
+                             <div id="step1" class="multisteps-form__panel shadow p-4 rounded bg-white">
+                                <div class="multisteps-form__title">
+                                    <h5>Step 1 Contents</h5>
+                                </div>
+                                <div class="multisteps-form__content">
+                                  <div class="row">
+                                      <div class="col-6 border-right">
+                                          <table  width="100%">
+                                              <tr>
+                                                  <th rowspan="2" width="25%">
+                                                    Mortgage Applied for:
+                                                </th>
+                                                <td  width="20%">
+                                                    <input type="checkbox" value="VA" name="va" id="va"/>
+                                                    <label for="va">VA</label>
+                                                </td>
+                                                <td  width="25%">
+                                                    <input type="checkbox" value="Conventional" name="conventional" id="conventional"/>
+                                                    <label for="conventional">VD</label>
+                                                </td>
+                                                <td  width="30%">
+                                                    <input  type="checkbox" value="Other" name="mortgage_other_check" id="mortgage_other_check"/>
+                                                    <label for="mortgage_other_check">VG</label>
+                                                </td>
+                                              </tr>
+                                              
+                                          </table>
+                                     </div>
+                                      <div class="col-3">
+                                          <div class="form-group">
+                                              <label for="agency_case_number">
+                                                  Agency Case Number
+                                              </label>
+
+                                              <div class="input-group input-group-sm">
+                                                <input type="text" name="agency_case_number" id="agency_case_number" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-3">
+                                          <div class="form-group">
+                                              <label for="lender_case_number">
+                                                  Lender Case Number
+                                              </label>
+                                              <div class="input-group input-group-sm">
+                                                <input type="text" name="lender_case_number" id="lender_case_number" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row border-top border-bottom">
+                                      <div class="col-2">
+                                          <div class="form-group">
+                                              <label for="amount">
+                                                  Amount
+                                              </label>
+                                              <div class="input-group">
+                                                  <div class="input-group input-group-sm">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+                                                    </div>
+                                                    <input type="text" name="amount" id="amount"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                                  </div>
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                      <div class="col-2 border-left">
+                                          <div class="form-group ">
+                                              <label for="interest_rate">
+                                                  Interest Rate
+                                              </label>
+                                              <div class="input-group">
+                                                  <div class="input-group input-group-sm">
+
+                                                    <input type="text" name="interest_rate" id="interest_rate"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                                    <div class="input-group-append">
+                                                      <span class="input-group-text" id="inputGroup-sizing-sm">%</span>
+                                                    </div>
+                                                  </div>
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                      <div class="col-2 border-left">
+                                          <div class="form-group">
+                                              <label for="no_of_months">
+                                                  No. of Months
+                                              </label>
+                                              <div class="input-group">
+                                                  <div class="input-group input-group-sm">
+
+                                                    <input type="text" name="no_of_months" id="no_of_months"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
+                                                  </div>
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                      <div class="col-6 border-left">
+                                          <table  width="100%">
+                                              <tr>
+                                                  <th rowspan="2" width="40%">
+                                                    Amortization type:
+                                                </th>
+                                                <td  width="30%">
+                                                    <input type="checkbox" value="Fixed Rate" name="fixed_rate" id="fixed_rate"/>
+                                                    <label for="fixed_rate">GPM</label>
+                                                </td>
+                                                <td  width="30%">
+                                                    <input  type="checkbox" value="Other" name="mortgage_other_check2" id="mortgage_other_check2"/>
+                                                    <label for="mortgage_other_check2">ARM</label>
+                                                </td>
+                                              </tr>
+                                              
+                                          </table>
+                                      </div>
+                                  </div>
+                                  <div class="button-row d-flex mt-4">
+                                     <button onclick="doChangingStepStuff('step2',false)" class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                                  </div>
+                                </div>
+                              </div>
+                             <!--Step 2-->
+                             <div id="step2" class="multisteps-form__panel shadow p-4 rounded bg-white">
+                                <div class="multisteps-form__title">
+                                    <h5>Step 2 Heading</h5>
+                                </div>
+                                <div class="multisteps-form__content">
+                                    <div class="row">
+                                        <div class="col-10 border-right">
+                                            <div class="form-group">
+                                                <label for="property_address">
+                                                    Subject Property Address
+                                                </label>
+
+                                                <div class="input-group input-group-sm">
+                                                  <input type="text" name="property_address" id="property_address" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                </div>
+                                            </div>
+                                       </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="no_of_units">
+                                                    No. of Units
+                                                </label>
+
+                                                <div class="input-group input-group-sm">
+                                                  <input type="text" name="no_of_units" id="no_of_units" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row border-top">
+                                      <div class="col-10 border-right">
+                                          <div class="form-group">
+                                              <label for="legal_description">
+                                                  Legal Description of Subject Property (attach description if necessary)
+                                              </label>
+
+                                              <div class="input-group input-group-sm">
+
+                                                <textarea name="legal_description" id="legal_description"  class="form-control" aria-describedby="inputGroup-sizing-sm"></textarea>
+                                              </div>
+                                          </div>
+                                     </div>
+                                      <div class="col-2">
+                                          <div class="form-group">
+                                              <label for="year_built">
+                                                  Year Built
+                                              </label>
+
+                                              <div class="input-group input-group-sm">
+                                                <input type="text" name="year_built" id="year_built" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                    
+                                    <div class="row">
+                                          <div class="col">
+                                              <label>
+                                                  <i><b>Complete this line if construction or construction-permanent loan.</b></i>
+                                              </label>
+
+                                          </div>
+                                      </div>
+                                    <div class="row  border-bottom">
+                                        <div class="col-2 border-right">
+                                          <div class="form-group">
+                                              <label for="year_lot_acquired">
+                                                  Year Lot Acquired
+                                              </label>
+
+                                              <div class="input-group input-group-sm">
+                                                <input type="text" name="year_lot_acquired" id="year_lot_acquired" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                              </div>
+                                          </div>
+                                     </div>
+                                        <div class="col-2 border-right">
+                                          <div class="form-group">
+                                                <label for="original_cost">
+                                                    Original Cost
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group input-group-sm">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+                                                      </div>
+                                                        <input type="text"  name="original_cost" id="original_cost"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                                    </div>
+                                                </div>
+
+                                          </div>
+                                        </div>
+                                        <div class="col-2 border-right">
+                                            <div class="form-group">
+                                                <label for="amount_existing_liens">
+                                                    Amount Existing Liens
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group input-group-sm">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+                                                      </div>
+                                                        <input type="text"  name="amount_existing_liens" id="amount_existing_liens"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-2 border-right">
+                                            <div class="form-group">
+                                                <label for="present_value_of_lot">
+                                                    (a) Present Value of Lot
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group input-group-sm">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+                                                      </div>
+                                                        <input type="text"  name="present_value_of_lot" id="present_value_of_lot"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-2 border-right">
+                                            <div class="form-group">
+                                                <label for="cost_of_improvements" >
+                                                    (b) Cost of Improvements
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group input-group-sm">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+                                                      </div>
+                                                        <input type="text"  name="cost_of_improvements" id="cost_of_improvements"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group form-group-sm">
+                                                <label for="total">
+                                                    Total (a+b)
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group input-group-sm">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+                                                      </div>
+                                                        <input type="text" value="0.00" name="total" id="total"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                  </div>
+                                    
+
+                                    <div class="row">
+                                      <div class="button-row d-flex mt-4 col-12">
+                                          <button onclick="doChangingStepStuff('step1',true)" class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                        <button onclick="doChangingStepStuff('step3',false)" class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                             <!--Step 3-->
+                             <div id="step3"  class="multisteps-form__panel shadow p-4 rounded bg-white">
+                                <div class="multisteps-form__title">
+                                    <div class="row">
+                                        <div class="col-4 border-right">
+                                            Left
+                                        </div>
+                                        <div class="col-4 border-right">
+                                            <h5>Step 3 Heading</h5>
+                                        </div>
+                                        <div class="col-4">
+                                            Right
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="multisteps-form__content">
+                                    <div class="row border-bottom">
+                                        <div class="col-6 border-right">
+                                            <div class="form-group">
+                                                <label for="borrower_name">
+                                                    Borrower’s Name (include Jr. or Sr. if applicable)
+                                                </label>
+
+                                                <div class="input-group input-group-sm">
+                                                  <input type="text" name="borrower_name" id="borrower_name" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                </div>
+                                            </div>
+                                       </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="co_borrower_name">
+                                                    Co-Borrower’s Name (include Jr. or Sr. if applicable)
+                                                </label>
+
+                                                <div class="input-group input-group-sm">
+                                                  <input type="text" name="co_borrower_name" id="co_borrower_name" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row  border-bottom">
+                                        <div class="col-6 border-right">
+                                            <div class="row">
+                                                <div class="col-4 border-right">
+                                                    <div class="form-group">
+                                                        <label for="borrower_social_security_number">
+                                                            Social Security Number
+                                                        </label>
+                                                        <div class="input-group input-group-sm"> 
+                                                            <input type="text" name="borrower_social_security_number" id="borrower_social_security_number" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                                <div class="col-3  border-right">
+                                                    <div class="form-group">
+                                                        <label for="borrower_home_phone">
+                                                            Home Phone
+                                                            <small>(incl. area code)</small>
+                                                        </label>
+
+                                                        <div class="input-group input-group-sm">
+                                                          <input type="text" name="home_phone" id="home_phone" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3  border-right">
+                                                    <div class="form-group">
+                                                        <label for="borrower_dob">
+                                                            DOB <small>(mm/dd/yyyy)</small>
+                                                        </label>
+                                                        <div class="input-group input-group-sm">
+                                                          <input type="text" name="borrower_dob" id="borrower_dob" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="form-group">
+                                                        <label for="borrower_years_school">
+                                                             Yrs. School
+                                                        </label>
+                                                        <div class="input-group input-group-sm">
+                                                          <input type="text" name="borrower_years_school" id="borrower_years_school" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <div class="col-4 border-right">
+                                                    <div class="form-group">
+                                                        <label for="co_borrower_social_security_number">
+                                                            Social Security Number
+                                                        </label>
+                                                        <div class="input-group input-group-sm"> 
+                                                            <input type="text" name="co_borrower_social_security_number" id="co_borrower_social_security_number" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                                <div class="col-3  border-right">
+                                                    <div class="form-group">
+                                                        <label for="co_borrower_home_phone">
+                                                            Home Phone
+                                                            <small>(incl. area code)</small>
+                                                        </label>
+
+                                                        <div class="input-group input-group-sm">
+                                                          <input type="text" name="co_borrower_home_phone" id="co_borrower_home_phone" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3  border-right">
+                                                    <div class="form-group">
+                                                        <label for="co_borrower_dob">
+                                                            DOB <small>(mm/dd/yyyy)</small>
+                                                        </label>
+                                                        <div class="input-group input-group-sm">
+                                                          <input type="text" name="co_borrower_dob" id="co_borrower_dob" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="form-group">
+                                                        <label for="co_borrower_years_school">
+                                                             Yrs. School
+                                                        </label>
+                                                        <div class="input-group input-group-sm">
+                                                          <input type="text" name="co_borrower_years_school" id="co_borrower_years_school" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row  border-bottom">
+                                        <div class="col-6 border-right">
+                                            <div class="row">
+                                                <div class="col-6 border-right">
+                                                    <table  width="100%">
+                                                        <tr>
+
+                                                            <td  width="50%">
+                                                                <input type="radio" value="Married" name="borrower_marital_status" id="married"/>
+                                                                <label for="married">Married</label>
+                                                            </td>
+                                                            <td  width="50%" rowspan="2">
+                                                                <input type="radio" value="Unmarried" name="borrower_marital_status" id="unmarried"/>
+                                                                <label for="unmarried">Unmarried <small>(include single, divorced, widowed)</small></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                 <input type="radio" value="Separated" name="borrower_marital_status" id="separated"/>
+                                                                 <label for="separated">Separated</label>
+                                                             </td> 
+
+                                                       </tr>
+                                                    </table>              
+                                               </div>
+                                                <div class="col-6  border-right">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label>Dependents (not listed by Co-Borrower)</label>
+                                                        </div>                            
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 border-right">
+                                                            <div class="form-group row">
+                                                                <label for="borrower_dependent_no" class="col-3">
+                                                                    no.
+                                                                </label>
+
+                                                                <div class="input-group input-group-sm col-9">
+                                                                  <input type="text" name="borrower_dependent_no" id="borrower_dependent_no" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="form-group row">
+                                                                <label for="borrower_dependent_ages" class="col-3">
+                                                                    ages
+                                                                </label>
+
+                                                                <div class="input-group input-group-sm col-9">
+                                                                  <input type="text" name="borrower_dependent_ages" id="borrower_dependent_ages" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <div class="col-6 border-right">
+                                                    <table  width="100%">
+                                                        <tr>
+
+                                                            <td  width="50%">
+                                                                <input type="radio" value="Married" name="co_borrower_marital_status" id="co_married"/>
+                                                                <label for="co_married">Married</label>
+                                                            </td>
+                                                            <td  width="50%" rowspan="2">
+                                                                <input type="radio" value="Unmarried" name="co_borrower_marital_status" id="co_unmarried"/>
+                                                                <label for="co_unmarried">Unmarried <small>(include single, divorced, widowed)</small></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                 <input type="radio" value="Separated" name="co_borrower_marital_status" id="co_separated"/>
+                                                                 <label for="co_separated">Separated</label>
+                                                             </td> 
+
+                                                       </tr>
+                                                    </table>              
+                                               </div>
+                                                <div class="col-6">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label>Dependents (not listed by Borrower)</label>
+                                                        </div>                            
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 border-right">
+                                                            <div class="form-group row">
+                                                                <label for="co_borrower_dependent_no" class="col-3">
+                                                                    no.
+                                                                </label>
+
+                                                                <div class="input-group input-group-sm col-9">
+                                                                  <input type="text" name="co_borrower_dependent_no" id="co_borrower_dependent_no" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="form-group row">
+                                                                <label for="co_borrower_dependent_ages" class="col-3">
+                                                                    ages
+                                                                </label>
+
+                                                                <div class="input-group input-group-sm col-9">
+                                                                  <input type="text" name="co_borrower_dependent_ages" id="borrower_dependent_ages" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                      <div class="button-row d-flex mt-4 col-12">
+                                        <button onclick="doChangingStepStuff('step2',true)"  class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                        <button onclick="doChangingStepStuff('step4',false)"  class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                             <!--Step 4-->
+                             <div id="step4"  class="multisteps-form__panel shadow p-4 rounded bg-white" >
+                                <div class="multisteps-form__title">
+                                    <div class="row">
+                                        <div class="col-4 border-right">
+                                            Left
+                                        </div>
+                                        <div class="col-4 border-right">
+                                            <h5>Step 4</h5>
+                                        </div>
+                                        <div class="col-4">
+                                            Right
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="multisteps-form__content">
+                                    <div class="row border-bottom">
+                                        <div class="col-6 border-right">
+                                            <div class="row">
+                                                <div class="col-9 border-right">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <br><br>
+                                                            <div class="form-group">
+                                                                <label for="borrower_name">
+                                                                    Name of Employer
+                                                                </label>
+
+                                                                <div class="input-group input-group-sm">
+                                                                  <input type="text" name="borrower_employer_name" id="borrower_employer_name" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <br><br>
+                                                            <div class="form-group">
+                                                                <label for="borrower_employer_address">
+                                                                    Address of Employer
+                                                                </label>
+
+                                                                <div class="input-group input-group-sm">
+                                                                  <input type="text" name="borrower_employer_address" id="borrower_employer_address" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <br><br>
+                                                            <input type="checkbox" value="Self Employed" name="borrower_self_employed" id="borrower_self_employed"/>
+                                                            <label for="borrower_self_employed">Self Employed</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label for="borrower_years_this_job">
+                                                                    Yrs. on this job
+                                                                </label>
+                                                                <div class="input-group input-group-sm"> 
+                                                                    <input type="text" name="borrower_years_this_job" id="borrower_years_this_job" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label for="borrower_years_this_line">
+                                                                    Yrs. employed
+                                                                </label>
+                                                                <div class="input-group input-group-sm"> 
+                                                                    <input type="text" name="borrower_years_this_line" id="borrower_years_this_line" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                       </div>
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <div class="col-9 border-right">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <br><br>
+                                                            <div class="form-group">
+                                                                <label for="co_borrower_name">
+                                                                    Name of Employer
+                                                                </label>
+
+                                                                <div class="input-group input-group-sm">
+                                                                  <input type="text" name="co_borrower_employer_name" id="co_borrower_employer_name" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <br><br>
+                                                            <div class="form-group">
+                                                                <label for="co_borrower_employer_address">
+                                                                    Address of Employer
+                                                                </label>
+
+                                                                <div class="input-group input-group-sm">
+                                                                  <input type="text" name="co_borrower_employer_address" id="co_borrower_employer_address" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <br><br>
+                                                            <input type="checkbox" value="Self Employed" name="co_borrower_self_employed" id="co_borrower_self_employed"/>
+                                                            <label for="co_borrower_self_employed">Self Employed</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label for="co_borrower_years_this_job">
+                                                                    Yrs. on this job
+                                                                </label>
+                                                                <div class="input-group input-group-sm"> 
+                                                                    <input type="text" name="co_borrower_years_this_job" id="co_borrower_years_this_job" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label for="co_borrower_years_this_line">
+                                                                    Yrs. employed
+                                                                </label>
+                                                                <div class="input-group input-group-sm"> 
+                                                                    <input type="text" name="co_borrower_years_this_line" id="co_borrower_years_this_line" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                       </div>
+
+
+                                    </div>
+                                    <div class="row  border-bottom">
+                                        <div class="col-6 border-right">
+                                            <div class="row">
+                                                <div class="col-6 border-right">
+                                                    <div class="form-group">
+                                                        <label for="borrower_position_title">
+                                                            Position/Title/Type of Business
+                                                        </label>
+                                                        <div class="input-group input-group-sm"> 
+                                                            <input type="text" name="borrower_position_title" id="borrower_position_title" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="borrower_business_phone">
+                                                            Business Phone 
+                                                            <small>(incl. area code)</small>
+                                                        </label>
+
+                                                        <div class="input-group input-group-sm">
+                                                          <input type="text" name="borrower_business_phone" id="borrower_business_phone" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <div class="col-6 border-right">
+                                                    <div class="form-group">
+                                                        <label for="co_borrower_position_title">
+                                                            Position/Title/Type of Business
+                                                        </label>
+                                                        <div class="input-group input-group-sm"> 
+                                                            <input type="text" name="co_borrower_position_title" id="co_borrower_position_title" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="co_borrower_business_phone">
+                                                            Business Phone 
+                                                            <small>(incl. area code)</small>
+                                                        </label>
+
+                                                        <div class="input-group input-group-sm">
+                                                          <input type="text" name="co_borrower_business_phone" id="co_borrower_business_phone" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <small>
+                                                <i>
+                                                    <b>
+                                                        If employed in current position for less than two years or if currently employed in more than one position, complete the following:
+                                                    </b>
+                                                </i>
+                                            </small>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                      <div class="button-row d-flex mt-4 col-12">
+                                        <button onclick="doChangingStepStuff('step3',true)"  class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                        <button onclick="doChangingStepStuff('step5',false)"  class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                             <!--Step 5-->
+                             <div id="step5"  class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                                <div class="multisteps-form__title">
+                                    <h5>Step 5 Heading</h5>
+                                </div>
+                                <div class="multisteps-form__content">
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <small>
+                                                <b>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id turpis vel dui molestie ullamcorper. Duis at commodo massa, non viverra nisi. Fusce tincidunt, eros vitae viverra maximus, velit sem auctor elit, non blandit sapien nisi id odio. Nullam vitae turpis accumsan, malesuada neque non, malesuada augue. In hac habitasse platea dictumst. Vivamus finibus ex blandit mollis varius. Donec justo ex, pharetra in dignissim in, lobortis nec augue. Quisque in ullamcorper ex.
+
+                            Suspendisse dapibus vel metus ac pharetra. Quisque consectetur sollicitudin nisl ut sodales. Aenean mattis dolor a dolor commodo bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra odio non augue condimentum tempus. Curabitur aliquam porttitor nunc posuere interdum. Proin in ultrices eros. Nullam eget varius velit, non aliquam nibh. Vestibulum tellus risus, tempor vel nibh id, feugiat cursus felis. In accumsan laoreet arcu non consequat. Nulla varius nulla vitae mi mattis, commodo accumsan ipsum blandit.
+
+                            
+                                                </b>
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                      <div class="button-row d-flex mt-4 col-12">
+                                        <button onclick="doChangingStepStuff('step4',true)"  class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                        <button onclick="doChangingStepStuff('step6',false)"  class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                             <!--Step 6-->
+                            <div id="step6"  class="multisteps-form__panel shadow p-4 rounded bg-white" >
+                                <div class="multisteps-form__title">
+                                    <h5>Final Step Heading</h5>
+                                </div>
+                                <div class="multisteps-form__content">
+                                    <div class="row border-bottom border-left border-right">
+                                        <div class="col-3 border-right">
+                                            <div class="form-group">
+                                                <label for="borrower_employer_address3">
+                                                    Use this continuation sheet if you need more 
+                            space to complete the Residential Loan
+                            Application. Mark B for Borrower or C for
+                            Co-Borrower
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                       <div class="col-6 border-right">
+                                            <div class="form-group">
+                                                <label for="borrower_employer_address3">
+                                                    Borrower:
+                                                </label>
+
+                                                <div class="input-group input-group-sm">
+                                                  <input type="text" name="borrower_employer_address3" id="borrower_employer_address3" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-group">
+                                                <label for="borrower_employer_address3">
+                                                    Agency Case Number:
+                                                </label>
+
+                                                <div class="input-group input-group-sm">
+                                                  <input type="text" name="borrower_employer_address3" id="borrower_employer_address3" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row border-bottom border-left border-right">
+                                        <div class="col-3 border-right">
+
+                                        </div>
+                                        <div class="col-6 border-right">
+                                            <div class="form-group">
+                                                <label for="borrower_employer_address3">
+                                                    Co-Borrower:
+                                                </label>
+
+                                                <div class="input-group input-group-sm">
+                                                  <input type="text" name="borrower_employer_address3" id="borrower_employer_address3" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-group">
+                                                <label for="borrower_employer_address3">
+                                                    Lender Case Number:
+                                                </label>
+
+                                                <div class="input-group input-group-sm">
+                                                  <input type="text" name="borrower_employer_address3" id="borrower_employer_address3" class="form-control" aria-describedby="inputGroup-sizing-sm"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                      <div class="button-row d-flex mt-4 col-12">
+                                        <button onclick="doChangingStepStuff('step5',true)"  class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                        <button class="btn btn-primary ml-auto js-btn-next" type="submit" title="Next">Submit</button>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>
